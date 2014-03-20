@@ -96,7 +96,7 @@
 {
     NSMutableArray *discardedMoles = [NSMutableArray array];
     
-    for (EMMole *mole in self.moles)
+    for (EMMole *mole in self.moles) {
         if (!CGRectIntersectsRect(self.view.bounds, mole.frame) || !mole.superview) {
             // Increment the tally:
             self.points = self.points - 1;
@@ -106,10 +106,10 @@
             [mole removeFromSuperview];
             [discardedMoles addObject:mole];
             NSLog(@"Removing mole -- count: %i", [self.moles count]);
-            [self.moles removeObjectsInArray:discardedMoles];
-
+        }
+    }
+    [self.moles removeObjectsInArray:discardedMoles];
 }
-  }
 
 
 
