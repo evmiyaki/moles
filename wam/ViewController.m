@@ -124,7 +124,11 @@
         }
     }
     [self.moles removeObjectsInArray:discardedMoles];
+<<<<<<< HEAD
      }
+=======
+}
+>>>>>>> FETCH_HEAD
 
 
 
