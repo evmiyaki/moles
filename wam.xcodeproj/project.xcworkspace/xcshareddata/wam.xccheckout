@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C2E132A3-5F13-45CC-9AF7-24ED2727D956</string>
+	<key>IDESourceControlProjectName</key>
+	<string>wam</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3F0B0BFB-D96D-40DB-B204-891BCD3B1FC1</key>
+		<string>https://github.com/evmiyaki/moles.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>wam.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3F0B0BFB-D96D-40DB-B204-891BCD3B1FC1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/evmiyaki/moles.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3F0B0BFB-D96D-40DB-B204-891BCD3B1FC1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3F0B0BFB-D96D-40DB-B204-891BCD3B1FC1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wam</string>
+		</dict>
+	</array>
+</dict>
+</plist>

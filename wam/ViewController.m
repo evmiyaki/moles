@@ -14,7 +14,10 @@
 @property (strong, nonatomic) CADisplayLink *displayLink;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (assign, nonatomic) NSUInteger points;
+@property (assign, nonatomic) NSUInteger health;
 @property (strong, nonatomic) UITapGestureRecognizer *tapGesture;
+@property (weak, nonatomic) IBOutlet UILabel *healthlabel;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *molepic;
 @end
 
 @implementation ViewController
@@ -24,6 +27,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.moles = [NSMutableArray array];
+//    self.molepic = [NSArray array];
+    self.health = 100;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -47,6 +52,16 @@
     [self.view addSubview:mole];
     [self.moles addObject:mole];
 }
+
+//// How to make mole
+//-(void)createMoleAtLocation:(CGPoint)location
+//{
+//    EMMole *mole= [[EMMole alloc] *molepic]
+//    mole.center = location;
+//    mole.delegate = self;
+//    [self.view addSubview:mole];
+//    [self.moles addObject:mole];
+//}
 
 // Creates mole
 - (IBAction)tap:(UITapGestureRecognizer *)sender
@@ -96,30 +111,30 @@
 {
     NSMutableArray *discardedMoles = [NSMutableArray array];
     
-    for (EMMole *mole in self.moles)
+    for (EMMole *mole in self.moles) {
         if (!CGRectIntersectsRect(self.view.bounds, mole.frame) || !mole.superview) {
             // Increment the tally:
-            self.points = self.points - 1;
+            self.health = self.health - 1;
             
-            // Show the new score:
-            self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", self.points];
+            // Show the new health:
+            self.healthlabel.text = [NSString stringWithFormat:@"Health: %i", self.health];
             [mole removeFromSuperview];
             [discardedMoles addObject:mole];
             NSLog(@"Removing mole -- count: %i", [self.moles count]);
-            [self.moles removeObjectsInArray:discardedMoles];
-
-}
-  }
+        }
+    }
+    [self.moles removeObjectsInArray:discardedMoles];
+     }
 
 
 
 #pragma mark - Mole delegates
-
+// Give points
 - (void)moleTapped:(EMMole *)mole
 {
     
     // Increment the tally:
-    self.points = self.points + 2;
+    self.points = self.points + 1;
     
 //    // Show the new score:
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", self.points];
